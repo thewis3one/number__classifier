@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,9 @@ namespace number_classificator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            FileStream imagefile = File.Create("image.png");
+            imagefile.Close();
+            
             ActiveControl = label1;
             ModelInput input = new ModelInput()
             {
